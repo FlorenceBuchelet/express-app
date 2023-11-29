@@ -18,3 +18,11 @@ describe("GET /api/movies/:id", () => {
       expect(response.status).toEqual(200);
     });
   });
+
+  describe("GET /api/movies/:id", () => {
+    it("should return all movies", async () => {
+      const response = await request(app).get("/api/movies/0");
+  
+      expect(response.status).toEqual(404);
+    });
+  });
